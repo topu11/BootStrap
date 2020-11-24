@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Popovers</title>
+<style>
+.popover {background-color: tomato;}
+/* .popover.bottom .arrow::after {border-bottom-color: tomato; } */
+.popover-content {background-color: tomato;}
+.popover-header {background-color:aqua;}
+</style>
+</head>
+<body>
+    <h1 class="display-3 text-center my-4">Popovers</h1>
+    <div class="container">
+        <button class="btn btn-sm btn-primary m-2" data-troggle="popover" title="hello world" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nesciunt?" data-placement="top">Toggle Popovers</button>
+        <button class="btn btn-sm btn-primary m-2" data-troggle="popover" title="hello world" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nesciunt?" data-placement="bottom">Toggle Popovers</button>
+        <button class="btn btn-sm btn-primary m-2" data-troggle="popover" title="hello world" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nesciunt?" data-placement="left">Toggle Popovers</button>
+        <button class="btn btn-sm btn-primary m-2" data-troggle="popover" title="hello world" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nesciunt?" data-placement="right">Toggle Popovers</button>
+  <br> <br> <br>
+               <!-- Disabled Popover -->
+               <button id="hello" class="btn btn-sm btn-primary m-2" data-troggle="popover" data-trigger="focus" title="hello world" data-content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nesciunt?" data-placement="left">Trigger Popovers</button>
+
+    <br><hr>
+                   <!-- Control With JS -->
+<button  class="btn btn-success btn-sm m-4" onclick="showPopover()">Show popover</button>
+<button  class="btn btn-primary btn-sm m-4" onclick="hidePopover()">Hide popover</button>
+<button  class="btn btn-primary btn-sm m-4" onclick="togglePopover()">toggle popover</button>
+   </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+$('[data-troggle="popover"]').popover();
+});
+function showPopover()
+      {
+        $('#hello').popover('show');
+      }
+      function hidePopover()
+      {
+        $('#hello').popover('hide');
+      }
+      function togglePopover()
+      {
+        $('#hello').popover('toggle');
+      }
+</script>
+</body>
+</html>

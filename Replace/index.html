@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+    <h1 class="display-3 text-center my-4">ToolTips</h1> 
+    <div class="container">
+        <button onclick="replace()" class="btn btn-primary m-4">Replace 2</button>
+        <button onclick="replace1()" class="btn btn-primary m-4">Replace 3</button>
+        <button onclick="replace2()" class="btn btn-primary m-4">Replace 1</button>
+        <div id="x1" style="background-color: aqua;">
+            <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="top" data-troggle="tooltip">Tooltip on Top</button>
+            <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="left" data-troggle="tooltip">Tooltip on left</button>
+            <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="right" data-troggle="tooltip">Tooltip on Right</button>
+            <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="bottom" data-troggle="tooltip">Tooltip on Bottom</button>
+        
+        </div>
+        <br>
+        <div id="x2" style="background-color: aquamarine;display:none">
+        
+            <button class="btn btn-secondary m-4" title="A.B.M. Touhidul Islam" data-placement="top" data-troggle="tooltip">Tooltip on Top</button>
+            <button class="btn btn-secondary m-4" title="A.B.M. Touhidul Islam" data-placement="left" data-troggle="tooltip">Tooltip on left</button>
+            <button class="btn btn-secondary m-4" title="A.B.M. Touhidul Islam" data-placement="right" data-troggle="tooltip">Tooltip on Right</button>
+            <button class="btn btn-secondary m-4" title="A.B.M. Touhidul Islam" data-placement="bottom" data-troggle="tooltip">Tooltip on Bottom</button>  
+        </div>
+        <div id="x3" style="background-color: greenyellow;display:none">
+        
+          <button class="btn btn-danger m-4" title="A.B.M. Touhidul Islam" data-placement="top" data-troggle="tooltip">Tooltip on Top</button>
+          <button class="btn btn-danger m-4" title="A.B.M. Touhidul Islam" data-placement="left" data-troggle="tooltip">Tooltip on left</button>
+          <button class="btn btn-danger m-4" title="A.B.M. Touhidul Islam" data-placement="right" data-troggle="tooltip">Tooltip on Right</button>
+          <button class="btn btn-danger m-4" title="A.B.M. Touhidul Islam" data-placement="bottom" data-troggle="tooltip">Tooltip on Bottom</button>  
+      </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('[data-troggle="tooltip"]').tooltip();
+     });
+     function showToolTip()
+      {
+        $('#hello').tooltip('show');
+      }
+      function hideToolTip()
+      {
+        $('#hello').tooltip('hide');
+      }
+      function toggleToolTip()
+      {
+        $('#hello').tooltip('toggle');
+      }
+     function replace()
+      {
+        document.getElementById("x1").style.display="none";
+        document.getElementById("x2").style.display="block";
+        document.getElementById("x3").style.display="none";
+      }
+      function replace1()
+      {
+        document.getElementById("x2").style.display="none";
+        document.getElementById("x1").style.display="none";
+        document.getElementById("x3").style.display="block";
+      }
+      function replace2()
+      {
+        document.getElementById("x2").style.display="none";
+        document.getElementById("x1").style.display="block";
+        document.getElementById("x3").style.display="none";
+      }
+</script>
+</body>
+</html>

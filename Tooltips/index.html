@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>ToolTips</title>
+</head>
+<body style="background-color: aquamarine;">
+<h1 class="display-3 text-center my-4">ToolTips</h1>    
+<div class="container">
+    <!-- ToolTip -->
+    <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="top" data-troggle="tooltip">Tooltip on Top</button>
+    <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="left" data-troggle="tooltip">Tooltip on left</button>
+    <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="right" data-troggle="tooltip">Tooltip on Right</button>
+    <button class="btn btn-primary m-4" title="A.B.M. Touhidul Islam" data-placement="bottom" data-troggle="tooltip">Tooltip on Bottom</button>
+
+<br><br>
+<!-- ToolTip with HTML -->
+<button id="hello" class="btn btn-primary m-4" title="<h2>A.B.M. Touhidul Islam</h2><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, neque.</p>" data-placement="top" data-troggle="tooltip" data-html="true">Tooltip on Top</button>
+<br>
+<hr>
+                <!-- ToolTip with JS -->
+<button class="btn btn-success m-4" onclick="showToolTip()">Show ToolTip</button>
+<button class="btn btn-primary m-4" onclick="hideToolTip()">Hide ToolTip</button>
+<button class="btn btn-primary m-4" onclick="toggleToolTip()">toggle ToolTip</button>
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('[data-troggle="tooltip"]').tooltip();
+     });
+     function showToolTip()
+      {
+        $('#hello').tooltip('show');
+      }
+      function hideToolTip()
+      {
+        $('#hello').tooltip('hide');
+      }
+      function toggleToolTip()
+      {
+        $('#hello').tooltip('toggle');
+      }
+</script>
+</body>
+</html>

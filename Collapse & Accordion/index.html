@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Collapse and Accordion</title>
+</head>
+<body>
+<h1 class="display-4 text-center my-4">Collapse and Accordion</h1>
+<div class="container">
+<!-- Button With Collape -->
+<button class="btn btn-primary mb-4" data-target="#my-collapseX" data-toggle="collapse" aria-expanded="false" aria-controls="my-collapse">Read More</button>
+<div id="my-collapseX" class="collapse">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Collape Text</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aliquid consectetur vel ratione excepturi ipsa debitis numquam sit iusto cupiditate fugiat rerum quae culpa necessitatibus, ipsam ducimus repudiandae assumenda esse.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Accordion -->
+<div id="accordion1" role="tablist">
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5 class="mb-0">
+                <a href="#SectionX1" data-toggle="collapse" style="text-decoration: none;">Section 1</a>
+            </h5>
+        </div>
+        <div class="collapse show" id="SectionX1" data-parent="#accordion1">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam nobis voluptate libero possimus, perspiciatis, laboriosam quaerat, corrupti distinctio cupiditate esse sed cumque facilis aliquam doloribus ipsa animi cum reiciendis!
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5 class="mb-0">
+            <a href="#SectionX2" data-toggle="collapse" style="text-decoration: none;">Section 2</a>
+            </h5>
+        </div>
+        <div class="collapse" id="SectionX2" data-parent="#accordion1">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam nobis voluptate libero possimus, perspiciatis, laboriosam quaerat, corrupti distinctio cupiditate esse sed cumque facilis aliquam doloribus ipsa animi cum reiciendis!
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5 class="mb-0">
+                <a href="#SectionX3" data-toggle="collapse" style="text-decoration: none;">Section 3</a>
+            </h5>
+        </div>
+        <div class="collapse" id="SectionX3" data-parent="#accordion1">
+            <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nam nobis voluptate libero possimus, perspiciatis, laboriosam quaerat, corrupti distinctio cupiditate esse sed cumque facilis aliquam doloribus ipsa animi cum reiciendis!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

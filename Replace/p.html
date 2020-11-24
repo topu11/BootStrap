@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+  <button onclick = "replace1()">Replace</button>
+  <button onclick = "replace2()">Replace</button>
+  <div id = "div1" style="display:block;background-color: aquamarine;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum leo, scelerisque at dapibus ac, consectetur vel ipsum. </div> 
+  <div id = "div2" style="display:none;background-color: blue;">Cras suscipit ullamcorper elit vitae sodales. Sed euismod felis molestie lorem gravida a venenatis risus sollicitudin. Proin accumsan lorem in est adipiscing faucibus. </div>
+  <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sunt dicta corrupti, odit quod rem maiores saepe. Fugiat nihil quos earum quaerat nisi quas vitae tempore, alias, labore pariatur aperiam voluptate. Laborum recusandae fugiat ducimus, officia consequuntur animi, nam itaque eaque tempore, numquam suscipit consequatur. Temporibus alias earum hic nemo!
+  </div>
+  <script type = "text/javascript">
+   function replace1() 
+   { 
+     document.getElementById("div1").style.display="none";
+    document.getElementById("div2").style.display="block";
+   } 
+   function replace2() 
+   { 
+     document.getElementById("div2").style.display="none";
+    document.getElementById("div1").style.display="block";
+   } 
+   </script>
+</body>
+</html>
